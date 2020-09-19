@@ -307,7 +307,6 @@ public class FormInputDataSiswa extends javax.swing.JFrame {
         cbJenisKelamin.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         cbJenisKelamin.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "PILIH", "LAKI-LAKI", "PEREMPUAN" }));
 
-        txtAgama.setEditable(false);
         txtAgama.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         txtAgama.setText("ISLAM");
 
@@ -682,34 +681,34 @@ public class FormInputDataSiswa extends javax.swing.JFrame {
 //        pekerjaanwali = txtPekerjaanWali.getText().trim();
 
         if (nisn.equals("")) {
-            JOptionPane.showMessageDialog(null, "Tidak Boleh Kosong !!!");
+            JOptionPane.showMessageDialog(null, "Nisn Tidak Boleh Kosong !!!");
             txtNisn.requestFocus();
         } else if (nama.equals("")) {
-            JOptionPane.showMessageDialog(null, "Tidak Boleh Kosong !!!");
+            JOptionPane.showMessageDialog(null, "Nama Tidak Boleh Kosong !!!");
             txtNamaSiswa.requestFocus();
         } else if (tempat.equals("")) {
-            JOptionPane.showMessageDialog(null, "Tidak Boleh Kosong !!!");
+            JOptionPane.showMessageDialog(null, "Tempat Tidak Boleh Kosong !!!");
             txtTempat.requestFocus();
         } else if (jDateChooser1.getDate() == null) {
             JOptionPane.showMessageDialog(null, "Tanggal Harap di Isi !!!");
             jDateChooser1.requestFocus();
         } else if (jeniskelamin.equals("")) {
-            JOptionPane.showMessageDialog(null, "Tidak Boleh Kosong !!!");
+            JOptionPane.showMessageDialog(null, "Silahkan Pilih Jenis Kelamin !!!");
             cbJenisKelamin.requestFocus();
         } else if (agama.equals("")) {
-            JOptionPane.showMessageDialog(null, "Tidak Boleh Kosong !!!");
+            JOptionPane.showMessageDialog(null, "Agama Tidak Boleh Kosong !!!");
             txtAgama.requestFocus();
         } else if (status.equals("")) {
-            JOptionPane.showMessageDialog(null, "Tidak Boleh Kosong !!!");
+            JOptionPane.showMessageDialog(null, "Silahkan Pilih Status !!!");
             txtNisn.requestFocus();
         } else if (anakke.equals("")) {
-            JOptionPane.showMessageDialog(null, "Tidak Boleh Kosong !!!");
+            JOptionPane.showMessageDialog(null, "Silahkan Isi Field Anak Ke !!!");
             txtAnakKe.requestFocus();
         } else if (alamat.equals("")) {
-            JOptionPane.showMessageDialog(null, "Tidak Boleh Kosong !!!");
+            JOptionPane.showMessageDialog(null, "Alamat Tidak Boleh Kosong !!!");
             txtAlamat.requestFocus();
         } else if (kontak.equals("")) {
-            JOptionPane.showMessageDialog(null, "Tidak Boleh Kosong !!!");
+            JOptionPane.showMessageDialog(null, "Kontak Tidak Boleh Kosong !!!");
             txtKontakSiswa.requestFocus();
         } else {
             SimpleDateFormat spf = new SimpleDateFormat("yyyy-MM-dd");
@@ -770,34 +769,34 @@ public class FormInputDataSiswa extends javax.swing.JFrame {
         kontak = txtKontakSiswa.getText().trim();
 
         if (nisn.equals("")) {
-            JOptionPane.showMessageDialog(null, "Tidak Boleh Kosong !!!");
+            JOptionPane.showMessageDialog(null, "Nisn Tidak Boleh Kosong !!!");
             txtNisn.requestFocus();
         } else if (nama.equals("")) {
-            JOptionPane.showMessageDialog(null, "Tidak Boleh Kosong !!!");
+            JOptionPane.showMessageDialog(null, "Nama Tidak Boleh Kosong !!!");
             txtNamaSiswa.requestFocus();
         } else if (tempat.equals("")) {
-            JOptionPane.showMessageDialog(null, "Tidak Boleh Kosong !!!");
+            JOptionPane.showMessageDialog(null, "Tempat Tidak Boleh Kosong !!!");
             txtTempat.requestFocus();
         } else if (jDateChooser1.getDate() == null) {
             JOptionPane.showMessageDialog(null, "Tanggal Harap di Isi !!!");
             jDateChooser1.requestFocus();
         } else if (jeniskelamin.equals("")) {
-            JOptionPane.showMessageDialog(null, "Tidak Boleh Kosong !!!");
+            JOptionPane.showMessageDialog(null, "Silahkan Pilih Jenis Kelamin !!!");
             cbJenisKelamin.requestFocus();
         } else if (agama.equals("")) {
-            JOptionPane.showMessageDialog(null, "Tidak Boleh Kosong !!!");
+            JOptionPane.showMessageDialog(null, "Agama Tidak Boleh Kosong !!!");
             txtAgama.requestFocus();
         } else if (status.equals("")) {
-            JOptionPane.showMessageDialog(null, "Tidak Boleh Kosong !!!");
+            JOptionPane.showMessageDialog(null, "Silahkan Pilih Status !!!");
             txtNisn.requestFocus();
         } else if (anakke.equals("")) {
-            JOptionPane.showMessageDialog(null, "Tidak Boleh Kosong !!!");
+            JOptionPane.showMessageDialog(null, "Silahkan Isi Field Anak Ke !!!");
             txtAnakKe.requestFocus();
         } else if (alamat.equals("")) {
-            JOptionPane.showMessageDialog(null, "Tidak Boleh Kosong !!!");
+            JOptionPane.showMessageDialog(null, "Alamat Tidak Boleh Kosong !!!");
             txtAlamat.requestFocus();
         } else if (kontak.equals("")) {
-            JOptionPane.showMessageDialog(null, "Tidak Boleh Kosong !!!");
+            JOptionPane.showMessageDialog(null, "Kontak Tidak Boleh Kosong !!!");
             txtKontakSiswa.requestFocus();
         } else {
             SimpleDateFormat spf = new SimpleDateFormat("yyyy-MM-dd");

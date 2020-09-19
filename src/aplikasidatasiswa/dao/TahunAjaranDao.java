@@ -32,7 +32,7 @@ public class TahunAjaranDao {
             st.executeUpdate(query);
             st.close();
             con.conn.close();
-            JOptionPane.showMessageDialog(null, "Password Berhasil di Ganti !!");
+            JOptionPane.showMessageDialog(null, "Tahun Ajaran Berhasil di Ganti !!");
         } catch (SQLException e) {
 
         }
