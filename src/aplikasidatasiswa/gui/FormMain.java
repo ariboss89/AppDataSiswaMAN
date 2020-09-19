@@ -68,6 +68,7 @@ public class FormMain extends javax.swing.JFrame {
             menuTA.setEnabled(false);
             menuReportGuru.setEnabled(false);
             menuRaport.setEnabled(false);
+            menuPenempatan.setEnabled(false);
         }
     }
     
@@ -100,7 +101,7 @@ public class FormMain extends javax.swing.JFrame {
         menuPengguna = new javax.swing.JMenuItem();
         menuTA = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
-        jMenuItem4 = new javax.swing.JMenuItem();
+        menuPenempatan = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         menuReportGuru = new javax.swing.JMenuItem();
         menuRaport = new javax.swing.JMenuItem();
@@ -310,13 +311,13 @@ public class FormMain extends javax.swing.JFrame {
         jMenu3.setText("PROSES");
         jMenu3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
-        jMenuItem4.setText("PENEMPATAN SISWA");
-        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+        menuPenempatan.setText("PENEMPATAN SISWA");
+        menuPenempatan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem4ActionPerformed(evt);
+                menuPenempatanActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuItem4);
+        jMenu3.add(menuPenempatan);
 
         jMenuBar1.add(jMenu3);
 
@@ -387,10 +388,10 @@ public class FormMain extends javax.swing.JFrame {
         new FormGuru().show();
     }//GEN-LAST:event_menuGuruActionPerformed
 
-    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+    private void menuPenempatanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuPenempatanActionPerformed
         // TODO add your handling code here:
         new FormPenempatanSiswa().show();
-    }//GEN-LAST:event_jMenuItem4ActionPerformed
+    }//GEN-LAST:event_menuPenempatanActionPerformed
 
     private void menuReportGuruActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuReportGuruActionPerformed
         // TODO add your handling code here:
@@ -488,7 +489,6 @@ public class FormMain extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -499,6 +499,7 @@ public class FormMain extends javax.swing.JFrame {
     private javax.swing.JMenuItem menuGuru;
     private javax.swing.JMenuItem menuMapel;
     private javax.swing.JMenuItem menuNilai;
+    private javax.swing.JMenuItem menuPenempatan;
     private javax.swing.JMenuItem menuPengguna;
     private javax.swing.JMenuItem menuRaport;
     private javax.swing.JMenuItem menuReportGuru;
