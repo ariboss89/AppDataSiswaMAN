@@ -16,6 +16,9 @@ public class tb_nilai {
     public String mapel;
     public String nisn;
     public int nilai;
+    public String predikat;
+    public int nilai_ketrampilan;
+    public String predikat_ketrampilan;
 
     public String getSemester() {
         return semester;
@@ -55,5 +58,29 @@ public class tb_nilai {
 
     public void setNilai(int nilai) {
         this.nilai = nilai;
+    }
+
+    public String getPredikat() {
+        return predikat;
+    }
+
+    public void setPredikat(String predikat) {
+        this.predikat = predikat;
+    }
+
+    public int getNilai_ketrampilan() {
+        return nilai_ketrampilan;
+    }
+
+    public void setNilai_ketrampilan(int nilai_ketrampilan) {
+        this.nilai_ketrampilan = nilai_ketrampilan;
+    }
+
+    public String getPredikat_ketrampilan() {
+        return predikat_ketrampilan;
+    }
+
+    public void setPredikat_ketrampilan(String predikat_ketrampilan) {
+        this.predikat_ketrampilan = predikat_ketrampilan;
     }
 }

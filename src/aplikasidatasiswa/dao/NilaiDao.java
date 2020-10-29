@@ -6,7 +6,6 @@
 
 package aplikasidatasiswa.dao;
 
-import Controller.DbConnection;
 import aplikasidatasiswa.controller.Koneksi;
 import java.io.File;
 import java.io.FileInputStream;
@@ -28,17 +27,20 @@ public class NilaiDao {
     private Statement stmt;
     private String query;
     
-    public void Save(String semester, String tahunAjaran, String mapel, String nisn, int nilai) {
+    public void Save(String semester, String tahunAjaran, String mapel, String nisn, int nilai, String predikat, int nilai_ketrampilan, String predikat_ketrampilan) {
         con = new Koneksi();
         con.connect();
         try {
-            st = con.conn.prepareStatement("insert into tb_nilai(semester, tahun_ajaran, mapel, nisn, nilai)values(?,?,?,?,?)");
-
+            st = con.conn.prepareStatement("insert into tb_nilai(semester, tahun_ajaran, mapel, nisn, nilai, predikat, nilai_ketrampilan, predikat_ketrampilan)values(?,?,?,?,?,?,?,?)");
             st.setString(1, semester);
             st.setString(2, tahunAjaran);
             st.setString(3, mapel);
             st.setString(4, nisn);
             st.setInt(5, nilai);
+            st.setString(6, predikat);
+            st.setInt(7, nilai_ketrampilan);
+            st.setString(8, predikat_ketrampilan);
+            
             st.executeUpdate();
             st.close();
             con.conn.close();
@@ -49,13 +51,16 @@ public class NilaiDao {
         }
     }
 
-    public void Update(String nisn, int nilai) {
+    public void Update(String nisn, int nilai, String predikat, int nilai_ketrampilan, String predikat_ketrampilan) {
         con = new Koneksi();
         con.connect();
         try {
-            st = con.conn.prepareStatement("UPDATE tb_nilai SET nilai=? WHERE nisn =?");
+            st = con.conn.prepareStatement("UPDATE tb_nilai SET nilai=?, predikat=?, nilai_ketrampilan=?, predikat_ketrampilan=? WHERE nisn =?");
             st.setInt(1, nilai);
-            st.setString(2, nisn);
+            st.setString(2, predikat);
+            st.setInt(3, nilai_ketrampilan);
+            st.setString(4, predikat_ketrampilan);
+            st.setString(5, nisn);
             st.executeUpdate();
             st.close();
             con.conn.close();

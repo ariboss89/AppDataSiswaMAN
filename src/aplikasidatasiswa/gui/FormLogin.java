@@ -6,7 +6,6 @@
 
 package aplikasidatasiswa.gui;
 
-import Model.tb_login;
 import aplikasidatasiswa.dao.LoginDao;
 import aplikasidatasiswa.model.tb_pengguna;
 import java.math.BigInteger;

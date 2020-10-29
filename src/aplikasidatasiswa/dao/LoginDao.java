@@ -5,9 +5,9 @@
  */
 package aplikasidatasiswa.dao;
 
-import Model.tb_login;
 import aplikasidatasiswa.controller.Koneksi;
 import aplikasidatasiswa.gui.FormMain;
+import aplikasidatasiswa.model.tb_pengguna;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.sql.ResultSet;
@@ -33,7 +33,7 @@ public class LoginDao {
             st = con.connect().createStatement();
             res = st.executeQuery("select *from tb_pengguna where username ='" + username + "' And password = '" + password + "' AND role = '"+role+"'");
             if (res.next()) {
-                tb_login.setUsername(username);
+                tb_pengguna.setUsername(username);
                 JOptionPane.showMessageDialog(null, "Welcome " + username);
                 new FormMain().setVisible(true);
             } else {
