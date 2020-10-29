@@ -51,16 +51,19 @@ public class NilaiDao {
         }
     }
 
-    public void Update(String nisn, int nilai, String predikat, int nilai_ketrampilan, String predikat_ketrampilan) {
+    public void Update(String nisn, int nilai, String predikat, int nilai_ketrampilan, String predikat_ketrampilan, String mapel, String ta, String semester) {
         con = new Koneksi();
         con.connect();
         try {
-            st = con.conn.prepareStatement("UPDATE tb_nilai SET nilai=?, predikat=?, nilai_ketrampilan=?, predikat_ketrampilan=? WHERE nisn =?");
+            st = con.conn.prepareStatement("UPDATE tb_nilai SET nilai=?, predikat=?, nilai_ketrampilan=?, predikat_ketrampilan=? WHERE nisn =? AND mapel =? AND tahun_ajaran =? AND semester=?");
             st.setInt(1, nilai);
             st.setString(2, predikat);
             st.setInt(3, nilai_ketrampilan);
             st.setString(4, predikat_ketrampilan);
             st.setString(5, nisn);
+            st.setString(6, mapel);
+            st.setString(7, ta);
+            st.setString(8, semester);
             st.executeUpdate();
             st.close();
             con.conn.close();

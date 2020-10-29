@@ -213,8 +213,7 @@ public class FormLogin extends javax.swing.JFrame {
         else {
             tb_pengguna.setUsername(username);
             tb_pengguna.setRole(jComboBox1.getSelectedItem().toString().trim());
-            ld.Login(username, lg.getPassword(), jComboBox1.getSelectedItem().toString().trim());            
-            dispose();
+            ld.Login(username, lg.getPassword(), jComboBox1.getSelectedItem().toString().trim());
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
