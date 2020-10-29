@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RaporSiswa" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e3b043af-fdbc-402c-9507-599d988abc78">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="192"/>
 	<parameter name="nama" class="java.lang.String"/>
 	<parameter name="kelas" class="java.lang.String"/>
 	<parameter name="jurusan" class="java.lang.String"/>
@@ -17,6 +17,9 @@
 c.semester,
 c.tahun_ajaran,
 c.nilai,
+c.predikat,
+c.nilai_ketrampilan,
+c.predikat_ketrampilan,
 a.nama_mapel,
 a.kategori
 FROM tb_nilai c
@@ -31,6 +34,15 @@ WHERE c.nisn = $P{nisn} AND c.semester = $P{semester} AND c.tahun_ajaran = $P{ta
 		<fieldDescription><![CDATA[]]></fieldDescription>
 	</field>
 	<field name="nilai" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="predikat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nilai_ketrampilan" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="predikat_ketrampilan" class="java.lang.String">
 		<fieldDescription><![CDATA[]]></fieldDescription>
 	</field>
 	<field name="nama_mapel" class="java.lang.String">
@@ -161,40 +173,100 @@ WHERE c.nisn = $P{nisn} AND c.semester = $P{semester} AND c.tahun_ajaran = $P{ta
 	<columnHeader>
 		<band height="20" splitType="Stretch">
 			<rectangle>
-				<reportElement x="0" y="0" width="555" height="20" uuid="0844a3e3-cfe9-4d50-960d-c1dea38f4f10"/>
+				<reportElement x="289" y="0" width="81" height="20" uuid="b069e2a0-feff-4e93-bb9b-36e4f93cc64e"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="370" y="0" width="113" height="20" uuid="d1187cd7-8539-458b-8367-28ab5a209cad"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="483" y="0" width="72" height="20" uuid="90d7a448-2f18-4a9c-a33c-d6cfd0f26ad6"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="208" y="0" width="81" height="20" uuid="5f4e4cbc-9ea6-476e-b978-07d3c62688d7"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="0" width="208" height="20" uuid="0844a3e3-cfe9-4d50-960d-c1dea38f4f10"/>
 			</rectangle>
 			<staticText>
-				<reportElement x="320" y="0" width="235" height="20" uuid="d37d4612-23a9-4a16-bd1c-02b495ae6f1c"/>
+				<reportElement x="208" y="0" width="81" height="20" uuid="d37d4612-23a9-4a16-bd1c-02b495ae6f1c"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="14" isBold="true"/>
+					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[NILAI]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="0" width="320" height="20" uuid="eef6c05a-877d-45d7-a431-8c3ce582940f"/>
+				<reportElement x="0" y="0" width="208" height="20" uuid="eef6c05a-877d-45d7-a431-8c3ce582940f"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="14" isBold="true"/>
+					<font size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[NAMA MATA PELAJARAN]]></text>
+				<text><![CDATA[MATA PELAJARAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="289" y="0" width="81" height="20" uuid="e08e9fa6-7566-4314-9776-5bebb95d519d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PREDIKAT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="0" width="113" height="20" uuid="28bcc9b0-9a5c-478a-a894-d7511119ef1d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KETERAMPILAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="483" y="0" width="72" height="20" uuid="101cfde0-5a50-4bd6-a0c4-5d9959f90c2a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PREDIKAT]]></text>
 			</staticText>
 		</band>
 	</columnHeader>
 	<detail>
 		<band height="20" splitType="Stretch">
 			<rectangle>
-				<reportElement x="0" y="0" width="555" height="20" uuid="ba7d9613-b244-49be-aca8-99caeda1708a"/>
+				<reportElement x="483" y="0" width="72" height="20" uuid="50d33c27-a2d6-4724-96c4-935cdcca8c81"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="370" y="0" width="113" height="20" uuid="3f829261-10d8-4cc3-af09-1e283b84f98f"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="289" y="0" width="81" height="20" uuid="bb9f706e-de49-4eff-abd6-723d7df4e266"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="208" y="0" width="81" height="20" uuid="c6206ac2-453e-4a2c-b18b-412d0a7481c9"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="0" width="208" height="20" uuid="ba7d9613-b244-49be-aca8-99caeda1708a"/>
 			</rectangle>
 			<textField>
-				<reportElement x="0" y="0" width="320" height="20" uuid="1901c97e-7373-473a-b6ec-31173f5658dc"/>
+				<reportElement x="0" y="0" width="208" height="20" uuid="1901c97e-7373-473a-b6ec-31173f5658dc"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{nama_mapel}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="320" y="0" width="235" height="20" uuid="8abae7e0-91ae-4f96-93cc-5aa9f1450a0e"/>
+				<reportElement x="208" y="0" width="81" height="20" uuid="8abae7e0-91ae-4f96-93cc-5aa9f1450a0e"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{nilai}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="289" y="0" width="81" height="20" uuid="5972c82a-333f-42ee-95fc-722cacecab96"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{predikat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="0" width="113" height="20" uuid="6e05071f-bc29-411e-b3ba-86bbb2b066e9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nilai_ketrampilan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="483" y="0" width="72" height="20" uuid="6f4b2c49-7e85-4814-9e10-895253947a27"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{predikat_ketrampilan}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
