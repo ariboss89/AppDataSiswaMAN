@@ -1,5 +1,5 @@
 ﻿# Host: localhost  (Version: 5.5.8)
-# Date: 2020-09-09 12:39:39
+# Date: 2020-10-30 00:10:47
 # Generator: MySQL-Front 5.3  (Build 4.81)
 
 /*!40101 SET NAMES utf8 */;
@@ -36,7 +36,7 @@ CREATE TABLE `tb_mapel` (
   `nama_mapel` varchar(255) DEFAULT NULL,
   `kategori` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "tb_mapel"
@@ -58,15 +58,18 @@ CREATE TABLE `tb_nilai` (
   `mapel` varchar(255) DEFAULT NULL,
   `nisn` varchar(255) DEFAULT NULL,
   `nilai` int(11) DEFAULT NULL,
+  `predikat` varchar(20) DEFAULT NULL,
+  `nilai_ketrampilan` int(11) DEFAULT NULL,
+  `predikat_ketrampilan` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "tb_nilai"
 #
 
 /*!40000 ALTER TABLE `tb_nilai` DISABLE KEYS */;
-INSERT INTO `tb_nilai` VALUES (1,'GANJIL','2022/2021','QURAN HADITS','1111',90),(2,'GANJIL','2022/2021','AQIDAH AKHLAK','1111',80);
+INSERT INTO `tb_nilai` VALUES (1,'GANJIL','2019/2020','QURAN HADITS','1111',84,'B',84,'B'),(2,'GANJIL','2019/2020','AQIDAH AKHLAK','1111',80,'C',90,'B'),(3,'GANJIL','2019/2020','QURAN HADITS','1234',90,'B',90,'B'),(4,'GENAP','2019/2020','QURAN HADITS','1111',90,'B',90,'B');
 /*!40000 ALTER TABLE `tb_nilai` ENABLE KEYS */;
 
 #
@@ -84,13 +87,13 @@ CREATE TABLE `tb_penempatan` (
   `walikelas` varchar(50) DEFAULT NULL,
   `status` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`Idp`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "tb_penempatan"
 #
 
-INSERT INTO `tb_penempatan` VALUES (1,'1111','Joko','PEREMPUAN','X','BELUM DI TENTUKAN','DRS. MANISE','BELUM LULUS');
+INSERT INTO `tb_penempatan` VALUES (1,'1111','Melissa Saputri','PEREMPUAN','X','BELUM DI TENTUKAN','DRS. MANISE','BELUM LULUS'),(2,'1234','Manis','LAKI-LAKI','X','BELUM DI TENTUKAN','DRS. MANISE','BELUM LULUS');
 
 #
 # Structure for table "tb_pengguna"
@@ -110,7 +113,7 @@ CREATE TABLE `tb_pengguna` (
 #
 
 /*!40000 ALTER TABLE `tb_pengguna` DISABLE KEYS */;
-INSERT INTO `tb_pengguna` VALUES ('ariboss89','e10adc3949ba59abbe56e057f20f883e','2019010101','ADMIN'),('oji123','25d55ad283aa400af464c76d713c07ad','20191010111','GURU');
+INSERT INTO `tb_pengguna` VALUES ('ariboss89','e10adc3949ba59abbe56e057f20f883e','-','ADMIN'),('manise123','e10adc3949ba59abbe56e057f20f883e','2019010101','GURU'),('oji123','25d55ad283aa400af464c76d713c07ad','20191010111','GURU');
 /*!40000 ALTER TABLE `tb_pengguna` ENABLE KEYS */;
 
 #
@@ -147,7 +150,7 @@ CREATE TABLE `tb_siswa` (
 # Data for table "tb_siswa"
 #
 
-INSERT INTO `tb_siswa` VALUES (5,'1111','Joko','Manise','2020-05-23','PEREMPUAN','ISLAM','ANAK KANDUNG','1','m','0812919101','J','AA','YUHUU','98719101','PNS','PNS','','','',NULL),(7,'1234','Manis','Kuy','2010-06-18','LAKI-LAKI',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `tb_siswa` VALUES (5,'1111','Melissa Saputri','Manise','2020-05-23','PEREMPUAN','ISLAM','PILIH','1','Ganet Perum Bukit Raya','0812919101','J','AA','YUHUU','98719101','PNS','PNS','','','',NULL),(7,'1234','Manis','Kuy','2010-06-18','LAKI-LAKI',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 
 #
 # Structure for table "tb_ta"
@@ -165,5 +168,5 @@ CREATE TABLE `tb_ta` (
 #
 
 /*!40000 ALTER TABLE `tb_ta` DISABLE KEYS */;
-INSERT INTO `tb_ta` VALUES (1,'2022/2021');
+INSERT INTO `tb_ta` VALUES (1,'2019/2020');
 /*!40000 ALTER TABLE `tb_ta` ENABLE KEYS */;
